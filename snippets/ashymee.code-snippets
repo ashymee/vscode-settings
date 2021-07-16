@@ -1,0 +1,556 @@
+{
+  "PUBLIC FUNCTION": {
+    "scope": "php",
+    "prefix": "pubf",
+    "body": ["public function ${1:nama_fungsi}(${2:params})", "{", "\t${0:code}", "}"],
+    "description": "public function"
+  },
+  "PRIVATE FUNCTION": {
+    "scope": "php",
+    "prefix": "prif",
+    "body": ["private function _${1:nama_fungsi}(${2:params})", "{", "\t$0", "}"],
+    "description": "private function"
+  },
+  "PROTECTED FUNCTION": {
+    "scope": "php",
+    "prefix": "prof",
+    "body": [
+      "protected function _${1:nama_fungsi}(${2:params})",
+      "{",
+      "\t${0:code}",
+      "}"
+    ],
+    "description": "protected function"
+  },
+  "PHP Echo": {
+    "scope": "html",
+    "prefix": "peko",
+    "body": ["<?= ${1:code} ?>"],
+    "description": "shorthand php echo"
+  },
+  "Base URL": {
+    "scope": "html",
+    "prefix": "burl",
+    "body": ["<?= base_url('${1:code}') ?>"],
+    "description": "shorthand base_url"
+  },
+  "PHP": {
+    "scope": "html",
+    "prefix": "php",
+    "body": ["<?php ${1:code} ?>"],
+    "description": "php snippet"
+  },
+  "VARDUMP": {
+    "scope": "php",
+    "prefix": "vd",
+    "body": ["var_dump(${1:code}); die();"],
+    "description": "var_dump"
+  },
+  "JSON ENCODE DIE": {
+    "scope": "php",
+    "prefix": "jekod",
+    "body": ["echo json_encode(${1:var}); die;"],
+    "description": "json_encode stop"
+  },
+  "JSON ENCODE": {
+    "scope": "php",
+    "prefix": "jeko",
+    "body": ["echo json_encode(${1:var});"],
+    "description": "json_encode"
+  },
+  "IF ELSE SHORTHAND PHP": {
+    "scope": "php",
+    "prefix": "ifp",
+    "body": ["${1:condition} === ${2:value} ? ${3:if_true} : ${0:if_false};"],
+    "description": "if else shorthand for php"
+  },
+  "Generate TS Config JSON": {
+    "scope": "",
+    "prefix": "tsc",
+    "body": [
+      "{",
+      "\t\"compilerOptions\": {",
+      "\t\t\"target\": \"es5\",",
+      "\t\t\"module\": \"commonjs\",",
+      "\t\t\"sourceMap\": true,",
+      "\t\t\"outDir\": \"build\",",
+      "\t\t\"rootDir\": \"src\",",
+      "\t\t\"strict\": true,",
+      "\t\t\"esModuleInterop\": true,",
+      "\t\t\"skipLibCheck\": true,",
+      "\t\t\"forceConsistentCasingInFileNames\": true,",
+      "\t\t\"removeComments\": true",
+      "\t}",
+      "}"
+    ]
+  },
+  "Bootstrap 4 : alert": {
+    "scope": "html",
+    "prefix": "b4_alert",
+    "body": ["<div class=\"alert alert-${1:color}\" role=\"alert\">${0:code}</div>"],
+    "description": "alert"
+  },
+  "Bootstrap 4 : alert link": {
+    "scope": "html",
+    "prefix": "b4_alert_link",
+    "body": [
+      "<div class=\"alert alert-${1:color}\" role=\"alert\">",
+      "${2:code} <a href=\"#\" class=\"alert-link\">an example link</a> ${0:link}",
+      "</div>"
+    ],
+    "description": "alert link"
+  },
+  "CLASS CI 3": {
+    "scope": "php",
+    "prefix": "ci3_class",
+    "body": [
+      "defined('BASEPATH') or exit('No direct script access allowed');",
+      "",
+      "class $TM_FILENAME_BASE extends CI_${2:what?}",
+      "{",
+      "\t${0:code}",
+      "}"
+    ],
+    "description": "class ci 3"
+  },
+  "DATA ARRAY": {
+    "scope": "php",
+    "prefix": "arr",
+    "body": ["$${1:data} = [", "\t'${2:key}' => ${0:value}", "];"],
+    "description": "array snippets"
+  },
+  "CONSTRUCT FUNCTION CI3": {
+    "scope": "php",
+    "prefix": "ci3_constructor",
+    "body": [
+      "public function __construct()",
+      "{",
+      "\tparent::__construct();",
+      "\t${1:code}",
+      "}"
+    ],
+    "description": "public function __construct"
+  },
+  "ENCRYPT": {
+    "scope": "php,html",
+    "prefix": "enc",
+    "body": ["$$this->encryption->encrypt(${1:code});"],
+    "description": "encrypt data"
+  },
+  "DECRYPT": {
+    "scope": "php,html",
+    "prefix": "dec",
+    "body": ["$$this->encryption->decrypt(${1:code});"],
+    "description": "decrypt data"
+  },
+  "NAMESPACE CONTROLLER CI4": {
+    "scope": "php",
+    "prefix": "ci4_controller_namespace",
+    "body": ["namespace App\\Controllers;"],
+    "description": "create namespace App\\Controllers"
+  },
+  "NAMESPACE MODELS CI4": {
+    "scope": "php",
+    "prefix": "ci4_namespace",
+    "body": ["namespace App\\Models;"],
+    "description": "namespace App\\Models"
+  },
+  "CONTROLLER CI4": {
+    "scope": "php",
+    "prefix": "ci4_controller",
+    "body": [
+      "namespace App\\Controllers;\n",
+      "use Codeigniter\\Controller;\n",
+      "class $TM_FILENAME_BASE extends Controller",
+      "{",
+      "\t${0://code}",
+      "}"
+    ],
+    "description": "new class"
+  },
+  "MODEL CI4": {
+    "scope": "php",
+    "prefix": "ci4_model",
+    "body": [
+      "namespace App\\Models;\n",
+      "use Codeigniter\\Model;\n",
+      "class $TM_FILENAME_BASE extends Model",
+      "{",
+      "\t${0://code}",
+      "}"
+    ],
+    "description": "generate new model on CI4"
+  },
+  "RETURN VIEW CI4": {
+    "scope": "php",
+    "prefix": "ci4_returnview",
+    "body": ["return view('${1:template?}', $$data);"],
+    "description": "return view()"
+  },
+  "ECHO VIEW CI4": {
+    "scope": "php",
+    "prefix": "ci4_echoview",
+    "body": ["echo view('${1:template?}', $$data);"],
+    "description": "echo view()"
+  },
+  "PRIMARY KEY": {
+    "scope": "php",
+    "prefix": "ci4_primarykey",
+    "body": ["protected $$table = '${1:nama_tabel}';", "protected $$primaryKey = 'id';"],
+    "description": "protected table & primary key on model"
+  },
+  "EXTEND TEMPLATE": {
+    "scope": "html",
+    "prefix": "ci4_xtendtemplate",
+    "body": ["<?= $$this->extend('${1:template?}'); ?>"],
+    "description": "extend template"
+  },
+  "RENDER SECTION CONTENT": {
+    "scope": "html",
+    "prefix": "ci4_rendersectioncontent",
+    "body": ["<?= $$this->renderSection('content'); ?>"],
+    "description": "render section content"
+  },
+  "SECTION CONTENT": {
+    "scope": "html",
+    "prefix": "ci4_sectioncontent",
+    "body": ["<?= $$this->section('content'); ?>"],
+    "description": "section content"
+  },
+  "END SECTION CONTENT": {
+    "scope": "html",
+    "prefix": "ci4_endsectioncontent",
+    "body": ["<?= $$this->endSection(); ?>"],
+    "description": "end section content"
+  },
+  "INCLUDE": {
+    "scope": "html",
+    "prefix": "ci4_include",
+    "body": ["<?= $$this->include('${1:include_what?}'); ?>"],
+    "description": "include"
+  },
+  "FIND ALL": {
+    "scope": "php",
+    "prefix": "ci4_findAll",
+    "body": ["${1:variabel}->findAll();"],
+    "description": "find all"
+  },
+  "PUBLIC CONSTRUCT CI4": {
+    "scope": "php",
+    "prefix": "ci4_construct",
+    "body": ["public function __construct()", "{", "\t${0://code}", "}"],
+    "description": "find all"
+  },
+  "THROW 404": {
+    "scope": "php",
+    "prefix": "ci4_404",
+    "body": [
+      "throw new \\CodeIgniter\\Exceptions\\PageNotFoundException('${0:nothing inside}');"
+    ],
+    "description": "throw 404 for codeigniter 4"
+  },
+  "CI 4 AJAX SECURITY": {
+    "scope": "php",
+    "prefix": "ci4_ajxs",
+    "body": [
+      "if ($$this->request->isAJAX() && $$this->request->isSecure() && $$this->request->getIPAddress() == $$this->ip) {",
+      "\t${0://}",
+      "}"
+    ],
+    "description": "throw 404 for codeigniter 4"
+  },
+  "JQUERY AJAX": {
+    "scope": "javascript",
+    "prefix": "jqajax",
+    "body": [
+      "$.ajax({",
+      "\ttype: '${1:method}',",
+      "\turl: '/${2:url}',",
+      "\theaders: {",
+      "\t\t'X-Requested-With': 'XMLHttpRequest',",
+      "\t\t'Content-Type': 'application/json',",
+      "\t},",
+      "\tdata: {${3:data}},",
+      "\tdataType: '${4:dataType}',",
+      "\tsuccess: (res) => {",
+      "\t\t${0://}",
+      "\t}",
+      "});"
+    ],
+    "description": "ash ajax snippets"
+  },
+  "FUNCTION SHORTHAND JS INLINE": {
+    "scope": "typescript, javascript",
+    "prefix": "fsi",
+    "body": ["(${2:params}) => {", "\t${3:code}", "}"],
+    "description": "function shorthand inline"
+  },
+  "IF ELSE SHORTHAND JS": {
+    "scope": "typescript, javascript",
+    "prefix": "ifj",
+    "body": ["${1:condition} === ${2:value} ? ${3:if_true} : ${0:if_false};"],
+    "description": "if else shorthand for js"
+  },
+  "FUNCTION SHORTHAND JS": {
+    "scope": "typescript, javascript",
+    "prefix": "fsl",
+    "body": [
+      "let ${1:nama_fungsi} = (${2:params}) => {",
+      "\t${3:code}",
+      "}",
+      "${1:nama_fungsi}()"
+    ],
+    "description": "function shorthand"
+  },
+  "CONSOLE LOG": {
+    "scope": "javascript",
+    "prefix": "logs",
+    "body": ["console.log(${1:what?})"],
+    "description": "console.log"
+  },
+  "CONSOLE INFO": {
+    "scope": "javascript",
+    "prefix": "lin",
+    "body": ["console.info(${1:what?})"],
+    "description": "console.info"
+  },
+  "CONSOLE ERROR": {
+    "scope": "javascript",
+    "prefix": "ler",
+    "body": ["console.error(${1:what?})"],
+    "description": "console.error"
+  },
+  "CONSOLE WARN": {
+    "scope": "javascript",
+    "prefix": "lw",
+    "body": ["console.warn(${1:what?})"],
+    "description": "console.warn"
+  },
+  "CONSOLE TABLE": {
+    "scope": "javascript",
+    "prefix": "lt",
+    "body": ["console.table(${1:what?})"],
+    "description": "console.table"
+  },
+  "CONSOLE LOG RETURN FALSE": {
+    "scope": "javascript",
+    "prefix": "lg",
+    "body": ["console.log(${1:code})", "return false"],
+    "description": "console.log"
+  },
+  "SWALJS STANDARD": {
+    "scope": "javascript",
+    "prefix": "sw_standard",
+    "body": [
+      "Swal.fire({",
+      "\type: '${1:error/warning/succes}',",
+      "\ttitle: '${2:title}',",
+      "\thtml: '${3:html}'",
+      "})"
+    ],
+    "description": "swal standard"
+  },
+  "SWALJS CUSTOM BUTTON": {
+    "scope": "javascript",
+    "prefix": "sw_custom_button",
+    "body": [
+      "Swal.fire({",
+      "\ttype: '${1:error/warning/succes}',",
+      "\ttitle: '${2:title}',",
+      "\thtml: '${3:html}',",
+      "\tshowConfirmButton: '${4:false/true}',",
+      "\tconfirmButtonText: '${5:text_tombol_confirm}',",
+      "\tshowCancelButton: '${6:false/true}',",
+      "\tcancelButtonText: '${7:text_tombol_cancel}'",
+      "\ttimer: '${0:timer}'",
+      "})"
+    ],
+    "description": "swal standard"
+  },
+  "SWALJS AJAX": {
+    "scope": "javascript",
+    "prefix": "swajax",
+    "body": [
+      "Swal.fire({",
+      "\ticon: '${1:error/warning/success/question}',",
+      "\ttitle: '${2:title}',",
+      "\thtml: `<input type=\"text\" id=\"${3:id}\" class=\"swal2-input\">`,",
+      "\tshowCancelButton: true,",
+      "\tconfirmButtonText: 'Simpan',",
+      "\tcancelButtonText: 'Tutup',",
+      "\tallowOutsideClick: false,",
+      "\tallowEnterKey: true,",
+      "\tallowEscapeKey: true,",
+      "})",
+      ".then((result) => {",
+      "\tif(result.value) {",
+      "\t\t$.ajax({",
+      "\t\t\turl: '${4:url}',",
+      "\t\t\ttype: 'post',",
+      "\t\t\tdata: {${5:data}},",
+      "\t\t\tdataType: 'json',",
+      "\t\t\tsuccess: res => {",
+      "\t\t\t\tconsole.log(res)",
+      "\t\t\t}",
+      "\t\t})",
+      "\t}",
+      "})"
+    ],
+    "description": "swal ajax"
+  },
+  "SNIPPETS": {
+    "scope": "snippets",
+    "prefix": "snip",
+    "body": [
+      "\"${1:nama}\": {",
+      "\t\"scope\": \"${2:php_js_html_dll}\",",
+      "\t\"prefix\": \"${3:inisial}\",",
+      "\t\"body\": [",
+      "\t\t\t\"${0:body}\"",
+      "\t\t]",
+      "}"
+    ],
+    "description": "snippets for snippets hayoloh.."
+  },
+  "JS VOID": {
+    "scope": "html",
+    "prefix": "jvoid",
+    "body": ["javascript:void(0)"],
+    "description": "javascript:void(0)"
+  },
+  "MODULE EXPORTS": {
+    "scope": "javascript",
+    "prefix": "mx",
+    "body": [
+      "module.exports = {",
+      "\tentry: {${1:entry}},",
+      "\toutput: {${2:output}},",
+      "\tmodule: {${3:module}},",
+      "\tplugins: [${0:plugins}]",
+      "}"
+    ],
+    "description": "module exports webpack"
+  },
+  "JQUERY GET": {
+    "scope": "javascript",
+    "prefix": "jqget",
+    "body": ["$.get(${1:URL},${2:callback});"],
+    "description": "jquery ajax get"
+  },
+  "TOAST": {
+    "scope": "javascript",
+    "prefix": "tst",
+    "body": [
+      "Toast.fire({",
+      "\ticon: 'success',",
+      "\ttitle: `${1:title}`,",
+      "\t}).then((result) => {",
+      "\t\tif (result.dismiss === Swal.DismissReason.timer) {",
+      "\t\t\t${0://}",
+      "\t\t}",
+      "});"
+    ],
+    "description": "toast swal2"
+  },
+  "AXIOS GET": {
+    "scope": "javascript",
+    "prefix": "xget",
+    "body": [
+      "axios({",
+      "\tmethod: '${1:post/get}',",
+      "\turl: '/${2:url}',",
+      "\theaders: { 'Content-Type': 'application/json' },",
+      "\tdata: {${3:data}},",
+      "}).then((res) => {",
+      "\t${0://}",
+      "});"
+    ],
+    "description": "axios get"
+  },
+  "REACTJS: FUNCTIONAL COMPONENTS (ARROW)": {
+    "scope": "javascriptreact",
+    "prefix": "ashrfce",
+    "body": [
+      "import React from 'react';\n",
+      "const $TM_FILENAME_BASE = (${1:props}) => {",
+      "return (",
+      "\t\t<div>",
+      "\t\t\t${2:code}",
+      "\t\t</div>",
+      "\t);",
+      "}\n",
+      "export default $TM_FILENAME_BASE"
+    ],
+    "description": "React Hooks Functional Components"
+  },
+  "REACTJS: FUNCTIONAL COMPONENTS": {
+    "scope": "javascriptreact",
+    "prefix": "ashrce",
+    "body": [
+      "import React from 'react';\n",
+      "export default function $TM_FILENAME_BASE(${1:props}) {",
+      "return (",
+      "\t\t<div>",
+      "\t\t\t${2:code}",
+      "\t\t</div>",
+      "\t);",
+      "}\n"
+    ],
+    "description": "React Hooks Functional Components"
+  },
+  "REACTJS: USESTATE": {
+    "scope": "javascriptreact",
+    "prefix": "ashrust",
+    "body": "const [${1:state}, set${2:state}] = useState('${3:initialState}')"
+  },
+  "REACTJS: USEIMMERREDUCER": {
+    "scope": "javascriptreact",
+    "prefix": "ashruim",
+    "body": [
+      "/* useImmerReducer ==================================================== */",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/downcase}/}InitialValues = {",
+      "\t${4:key}: '${5:value}'",
+      "}",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/downcase}/}Reducer = (draft, action) => {",
+      "\tswitch(action.type) {",
+      "\t\tcase '${2:caseType}':",
+      "\t\t\t// ${3:code}",
+      "\t\t\treturn",
+      "\t\t\tdefault:",
+      "\t\t\treturn",
+      "\t}",
+      "}",
+      "const [${6:state}, ${7:dispatch}] = useImmerReducer(${TM_FILENAME_BASE/(.*)/${1:/downcase}/}Reducer, ${TM_FILENAME_BASE/(.*)/${1:/downcase}/}InitialValues)",
+      "/* /useImmerReducer =================================================== */"
+    ]
+  },
+  "REACT: USEEFFECT": {
+    "scope": "javascriptreact",
+    "prefix": "asheff",
+    "body": ["useEffect(() => {", "\t${1:code}", "}, [])"]
+  },
+  "NEXT GET INITIAL PROPS": {
+    "scope": "javascriptreact",
+    "prefix": "ngip",
+    "body": ["$TM_FILENAME_BASE.getInitialProps = async ctx => {", "\t${0:code}", "}"]
+  },
+  "PRETTIERRC": {
+    "scope": "",
+    "prefix": "prt",
+    "body": [
+      "semi: false",
+      "singleQuote: true",
+      "tabWidth: 4",
+      "trailingComma: es5",
+      "printWidth: 120",
+      "jsxBracketSameLine: true",
+      "jsxSingleQuote: true",
+      "endOfLine: auto"
+    ]
+  },
+  "ARROWFUNCTION": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "sfn",
+    "body": "(${1:args}) => {${2:value}}"
+  }
+}
