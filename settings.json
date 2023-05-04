@@ -53,7 +53,6 @@
   "typescript.tsserver.useSyntaxServer": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.menuBarVisibility": "toggle",
-  "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {
     "tab.activeBackground": "#9999992d",
     "tab.hoverBackground": "#9999991c",
@@ -101,5 +100,6 @@
   ],
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
-  "zenMode.hideTabs": false
+  "zenMode.hideTabs": false,
+  "workbench.activityBar.visible": false
 }
