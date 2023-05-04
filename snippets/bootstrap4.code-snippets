@@ -1,0 +1,20 @@
+{
+	"Bootstrap 4 : alert": {
+		"scope": "html",
+		"prefix": "b4_alert",
+		"body": [
+			"<div class=\"alert alert-${1:color}\" role=\"alert\">${0:code}</div>"
+		],
+		"description": "alert"
+	},
+	"Bootstrap 4 : alert link": {
+		"scope": "html",
+		"prefix": "b4_alert_link",
+		"body": [
+			"<div class=\"alert alert-${1:color}\" role=\"alert\">",
+			"${2:code} <a href=\"#\" class=\"alert-link\">an example link</a> ${0:link}",
+		  	"</div>"
+		],
+		"description": "alert link"
+	},
+}

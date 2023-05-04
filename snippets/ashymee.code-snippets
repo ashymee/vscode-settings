@@ -2,13 +2,23 @@
   "PUBLIC FUNCTION": {
     "scope": "php",
     "prefix": "pubf",
-    "body": ["public function ${1:nama_fungsi}(${2:params})", "{", "\t${0:code}", "}"],
+    "body": [
+      "public function ${1:nama_fungsi}(${2:params})",
+      "{",
+      "\t${0:code}",
+      "}"
+    ],
     "description": "public function"
   },
   "PRIVATE FUNCTION": {
     "scope": "php",
     "prefix": "prif",
-    "body": ["private function _${1:nama_fungsi}(${2:params})", "{", "\t$0", "}"],
+    "body": [
+      "private function _${1:nama_fungsi}(${2:params})",
+      "{",
+      "\t$0",
+      "}"
+    ],
     "description": "private function"
   },
   "PROTECTED FUNCTION": {
@@ -87,7 +97,9 @@
   "Bootstrap 4 : alert": {
     "scope": "html",
     "prefix": "b4_alert",
-    "body": ["<div class=\"alert alert-${1:color}\" role=\"alert\">${0:code}</div>"],
+    "body": [
+      "<div class=\"alert alert-${1:color}\" role=\"alert\">${0:code}</div>"
+    ],
     "description": "alert"
   },
   "Bootstrap 4 : alert link": {
@@ -196,7 +208,10 @@
   "PRIMARY KEY": {
     "scope": "php",
     "prefix": "ci4_primarykey",
-    "body": ["protected $$table = '${1:nama_tabel}';", "protected $$primaryKey = 'id';"],
+    "body": [
+      "protected $$table = '${1:nama_tabel}';",
+      "protected $$primaryKey = 'id';"
+    ],
     "description": "protected table & primary key on model"
   },
   "EXTEND TEMPLATE": {
@@ -301,12 +316,6 @@
       "${1:nama_fungsi}()"
     ],
     "description": "function shorthand"
-  },
-  "CONSOLE LOG": {
-    "scope": "javascript",
-    "prefix": "logs",
-    "body": ["console.log(${1:what?})"],
-    "description": "console.log"
   },
   "CONSOLE INFO": {
     "scope": "javascript",
@@ -532,7 +541,11 @@
   "NEXT GET INITIAL PROPS": {
     "scope": "javascriptreact",
     "prefix": "ngip",
-    "body": ["$TM_FILENAME_BASE.getInitialProps = async ctx => {", "\t${0:code}", "}"]
+    "body": [
+      "$TM_FILENAME_BASE.getInitialProps = async ctx => {",
+      "\t${0:code}",
+      "}"
+    ]
   },
   "PRETTIERRC": {
     "scope": "",
@@ -552,5 +565,17 @@
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "sfn",
     "body": "(${1:args}) => {${2:value}}"
+  },
+  "Functional Component": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "afn",
+    "body": [
+      "const $TM_FILENAME_BASE = () => {",
+      "\treturn (",
+      "\t\t${2:<div>element</div>",
+      "\t})",
+      "}\n",
+      "export default $TM_FILENAME_BASE"
+    ]
   }
 }

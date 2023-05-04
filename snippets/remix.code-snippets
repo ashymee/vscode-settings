@@ -1,0 +1,21 @@
+{
+  "Export Links For Remix": {
+    "scope": "typescriptreact",
+    "prefix": "rmx_links",
+    "body": [
+      "import {LinksFunction} from \"remix\"\n",
+      "export const links: LinksFunction = () => [{rel: 'stylesheet', href:$href}]"
+    ],
+    "description": "export links for remix framework"
+  },
+  "Export Links and Meta For Remix": {
+    "scope": "typescriptreact",
+    "prefix": "rmx_meta_links",
+    "body": [
+      "import {LinksFunction, MetaFunction} from \"remix\"\n",
+      "export const links: LinksFunction = () => [{rel: 'stylesheet', href: \"${0:href}\"}]",
+      "export const meta: MetaFunction = () => ({title: \"${0:title}\", description: \"${1:description}\"})"
+    ],
+    "description": "export links for remix framework"
+  }
+}

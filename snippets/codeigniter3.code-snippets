@@ -1,0 +1,53 @@
+{
+	"CLASS CI 3": {
+		"scope": "php",
+		"prefix": "ci3_class",
+		"body": [
+			"defined('BASEPATH') or exit('No direct script access allowed');",
+			"",
+			"class $TM_FILENAME_BASE extends CI_${2:what?}",
+			"{",
+			"\t${0:code}",
+			"}"
+		],
+		"description": "class ci 3"
+	},
+	"DATA ARRAY": {
+		"scope": "php",
+		"prefix": "arr",
+		"body": [
+			"$${1:data} = [",
+			"\t'${2:key}' => ${0:value}",
+			"];"
+		],
+		"description": "array snippets"
+	},
+	"CONSTRUCT FUNCTION CI3": {
+		"scope": "php",
+		"prefix": "ci3_constructor",
+		"body": [
+			"public function __construct()",
+			"{",
+			"\tparent::__construct();",
+			"\t${1:code}",
+			"}"
+		],
+		"description": "public function __construct"
+	},
+	"ENCRYPT": {
+		"scope": "php,html",
+		"prefix": "enc",
+		"body": [
+			"$$this->encryption->encrypt(${1:code});"
+		],
+		"description": "encrypt data"
+	},
+	"DECRYPT": {
+		"scope": "php,html",
+		"prefix": "dec",
+		"body": [
+			"$$this->encryption->decrypt(${1:code});"
+		],
+		"description": "decrypt data"
+	}
+}

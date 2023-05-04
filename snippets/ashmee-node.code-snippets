@@ -1,0 +1,53 @@
+{
+  "NextJS Document": {
+    "scope": "typescriptreact",
+    "prefix": "_docs",
+    "body": [
+      "import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'",
+      "\n",
+      "class MyDocument extends Document {",
+      "\tstatic async getInitialProps(ctx: DocumentContext) {",
+      "\t\tconst initialProps = await Document.getInitialProps(ctx)",
+      "\t\treturn { ...initialProps }",
+      "\t}",
+      "\n",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<Html>",
+      "\t\t\t\t<Head />",
+      "\t\t\t\t<body>",
+      "\t\t\t\t\t<Main />",
+      "\t\t\t\t<NextScript />",
+      "\t\t\t\t</body>",
+      "\t\t\t</Html>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "\n",
+      "\texport default MyDocument"
+    ],
+    "description": "Document for React or NextJS"
+  },
+  "useEffect": {
+    "scope": "typescriptreact",
+    "prefix": "_eff",
+    "body": ["useEffect(() => {", "\t$1", "}, [])"],
+    "description": "useEffect"
+  },
+  "Firebase - Create Collection": {
+    "scope": "typescriptreact",
+    "prefix": "_create_collection",
+    "body": [
+      "const createCollection = <T = DocumentData>(collectionName: string) => {",
+      "\treturn collection(db, collectionName) as CollectionReference<T>;",
+      "};"
+    ],
+    "description": "useState"
+  },
+  "Eslint Disable Dep Dependency": {
+    "scope": "typescriptreact,typescript",
+    "prefix": "_eslint",
+    "body": ["// eslint-disable-next-line react-hooks/exhaustive-deps"],
+    "description": "eslint-disable-next-line react-hooks/exhaustive-deps"
+  }
+}

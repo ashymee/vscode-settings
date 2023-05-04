@@ -1,0 +1,24 @@
+{
+  "Print to console": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "_app",
+    "body": [
+      "import { NextPage } from 'next'",
+      "import type { AppProps } from 'next/app'",
+      "import { ReactElement, ReactNode } from 'react'",
+      "import '../styles/globals.css'\n",
+      "export type NextPageWithLayout = NextPage & {",
+      "\tgetLayout?: (page: ReactElement) => ReactNode",
+      "}\n",
+      "type AppPropsWithLayout = AppProps & {",
+      "\tComponent: NextPageWithLayout",
+      "}\n",
+      "const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {",
+      "\tconst getLayout = Component.getLayout ?? ((page) => page)",
+      "\treturn getLayout(<Component {...pageProps} />)",
+      "}\n",
+      "export default MyApp\n"
+    ],
+    "description": "Log output to console"
+  }
+}

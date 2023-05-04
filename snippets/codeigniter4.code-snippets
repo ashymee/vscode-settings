@@ -1,0 +1,146 @@
+{
+	"NAMESPACE CONTROLLER CI4": {
+		"scope": "php",
+		"prefix": "ci4_controller_namespace",
+		"body": [
+			"namespace App\\Controllers;"
+		],
+		"description": "create namespace App\\Controllers"
+	},
+	"NAMESPACE MODELS CI4": {
+		"scope": "php",
+		"prefix": "ci4_namespace",
+		"body": [
+			"namespace App\\Models;"
+		],
+		"description": "namespace App\\Models"
+	},
+	"CONTROLLER CI4": {
+		"scope": "php",
+		"prefix": "ci4_controller",
+		"body": [
+			"namespace App\\Controllers;\n",
+			"use Codeigniter\\Controller;\n",
+			"class $TM_FILENAME_BASE extends Controller",
+			"{",
+			"\t${0://code}",
+			"}"
+		],
+		"description": "new class"
+	},
+	"MODEL CI4": {
+		"scope": "php",
+		"prefix": "ci4_model",
+		"body": [
+			"namespace App\\Models;\n",
+			"use Codeigniter\\Model;\n",
+			"class $TM_FILENAME_BASE extends Model",
+			"{",
+			"\t${0://code}",
+			"}"
+		],
+		"description": "generate new model on CI4"
+	},
+	"RETURN VIEW CI4": {
+		"scope": "php",
+		"prefix": "ci4_returnview",
+		"body": [
+			"return view('${1:template?}', $$data);"
+		],
+		"description": "return view()"
+	},
+	"ECHO VIEW CI4": {
+		"scope": "php",
+		"prefix": "ci4_echoview",
+		"body": [
+			"echo view('${1:template?}', $$data);"
+		],
+		"description": "echo view()"
+	},
+	"PRIMARY KEY": {
+		"scope": "php",
+		"prefix": "ci4_primarykey",
+		"body": [
+			"protected $$table = '${1:nama_tabel}';",
+			"protected $$primaryKey = 'id';"
+		],
+		"description": "protected table & primary key on model"
+	},
+	"EXTEND TEMPLATE": {
+		"scope": "html",
+		"prefix": "ci4_xtendtemplate",
+		"body": [
+			"<?= $$this->extend('${1:template?}'); ?>"
+		],
+		"description": "extend template"
+	},
+	"RENDER SECTION CONTENT": {
+		"scope": "html",
+		"prefix": "ci4_rendersectioncontent",
+		"body": [
+			"<?= $$this->renderSection('content'); ?>"
+		],
+		"description": "render section content"
+	},
+	"SECTION CONTENT": {
+		"scope": "html",
+		"prefix": "ci4_sectioncontent",
+		"body": [
+			"<?= $$this->section('content'); ?>"
+		],
+		"description": "section content"
+	},
+	"END SECTION CONTENT": {
+		"scope": "html",
+		"prefix": "ci4_endsectioncontent",
+		"body": [
+			"<?= $$this->endSection(); ?>"
+		],
+		"description": "end section content"
+	},
+	"INCLUDE": {
+		"scope": "html",
+		"prefix": "ci4_include",
+		"body": [
+			"<?= $$this->include('${1:include_what?}'); ?>"
+		],
+		"description": "include"
+	},
+	"FIND ALL": {
+		"scope": "php",
+		"prefix": "ci4_findAll",
+		"body": [
+			"${1:variabel}->findAll();"
+		],
+		"description": "find all"
+	},
+	"PUBLIC CONSTRUCT CI4": {
+		"scope": "php",
+		"prefix": "ci4_construct",
+		"body": [
+			"public function __construct()",
+			"{",
+			"\t${0://code}",
+			"}"
+		],
+		"description": "find all"
+	},
+	"THROW 404": {
+		"scope": "php",
+		"prefix": "ci4_404",
+		"body": [
+			"throw new \\CodeIgniter\\Exceptions\\PageNotFoundException('${0:nothing inside}');"
+		],
+		"description": "throw 404 for codeigniter 4"
+	},
+	"CI 4 AJAX SECURITY": {
+		"scope": "php",
+		"prefix": "ci4_ajxs",
+		"body": [
+			"if ($$this->request->isAJAX() && $$this->request->isSecure() && $$this->request->getIPAddress() == $$this->ip) {",
+			"\t${0://}",
+			"}"
+		],
+		"description": "throw 404 for codeigniter 4"
+	}
+}

@@ -1,0 +1,38 @@
+{
+  "doc bloc": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "api_docs",
+    "body": [
+      "/**",
+      "* ${1:for}",
+      " *",
+      " * @param {import('next').NextApiRequest} req",
+      " * @param {import('next').NextApiResponse} res",
+      " * @returns {Promise<void>}",
+      " *",
+      " * INFO ---",
+      " * url: ",
+      " * permission: ",
+      " *",
+      " * HEADER ---",
+      " * Authorization: Bearer <ACCESS_TOKEN>",
+      " * Content-Type: application/json",
+      " * ",
+      " * REQUEST BODY ---",
+      "   {\n",
+      "       ${2:req}",
+      "   }",
+      " *",
+      " * RESPONSE BODY ---",
+      "   {\n",
+      "       ${3:res}",
+      "   }",
+      " */\n",
+      "const ${4:fn} = async (req, res) => {",
+      "\treturn res.json({})",
+      "}\n",
+      "export default ${4:fn}"
+    ],
+    "description": "doc bloc for eluon project"
+  }
+}
